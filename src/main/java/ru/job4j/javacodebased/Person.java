@@ -19,7 +19,8 @@ public class Person {
     }
 
     @Autowired
-    public Person(@Value("Man") String name, @Qualifier("myDog") Dog dog, Cat cat, Canary canary, Parrot parrot) {
+    public Person(@Value("Man") String name, @Qualifier("myDog") Dog dog, Cat cat,
+                  Canary canary, Parrot parrot) {
         this.name = name;
         this.dog = dog;
         this.cat = cat;

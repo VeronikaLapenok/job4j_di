@@ -9,8 +9,8 @@ public class StartUI {
         this.input = input;
     }
 
-    public void add(String value) {
-        store.add(value);
+    public void add() {
+        store.add(input.askStr("Enter name: " + System.lineSeparator()));
     }
 
     public void print() {

@@ -16,10 +16,10 @@ public class Dog {
         return name;
     }
 
-
     public void postConstruct() {
         System.out.println("bean Dog method postConstruct()");
     }
+
     @PreDestroy
     public void preDestroy() {
         System.out.println("bean Dog method preDestroy()");

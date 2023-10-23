@@ -13,7 +13,8 @@ import java.util.Arrays;
 @Aspect
 @Component
 public class BeforeAndAfterLoggingAspect {
-    private static final Logger LOG = LoggerFactory.getLogger(BeforeAndAfterLoggingAspect.class.getName());
+    private static final Logger LOG = LoggerFactory
+            .getLogger(BeforeAndAfterLoggingAspect.class.getName());
 
     @Before("execution(* ru.job4j.aop.service.*.*(..))")
     public void logBefore(JoinPoint joinPoint) {
@@ -21,7 +22,7 @@ public class BeforeAndAfterLoggingAspect {
         Object[] argsObj = joinPoint.getArgs();
         String args = Arrays.toString(argsObj);
         String methodName = signature.toShortString();
-        LOG.info("Вызван метод:  {}", methodName );
+        LOG.info("Вызван метод:  {}", methodName);
         LOG.info("аргументы: {}", args);
     }
 
